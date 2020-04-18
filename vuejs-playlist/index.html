@@ -60,7 +60,14 @@
             <form action="">
                 <label for="name">Nombre: </label>
                 <input v-on:keypress.13.prevent="updateName" type="text" placeholder="write your name and press 'Enter'">
-                <p class="output">{{name}}</p>
+            </form>
+        </section>
+        <section>
+            <h2>{{lessonTitle('Two way Data Binding (v-model)')}}</h2>
+            <form action="">
+                <label for="name">Nombre: </label>
+                <input v-model="name" type="text" placeholder="write your name">
+                <p v-if="name" class="output">Tu nombre es: {{name}}</p>
             </form>
         </section>
     </div>
