@@ -3,12 +3,21 @@ new Vue({
     data: {
         appTitle: 'I am a Developer Learning Vue',
         website: 'http://iamadeveloper.es',
-        printSpan: '<span>This is an example of how to <strong>output an "html tag"</strong> using data binding.</span>'
+        printSpan: '<span>This is an example of how to <strong>output an "html tag"</strong> using data binding.</span>',
+        cantidad: 50,
 
     },
     methods:{
         lessonTitle: function(lessonName){
             return "Lesson name: " + lessonName
+        },
+        add: function(inc){
+            //this.cantidad++;
+            this.cantidad += inc
+        },
+        subtract: function(dec){
+            //this.cantidad--;
+            this.cantidad -= dec
         }
     }
 });

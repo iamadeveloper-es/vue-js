@@ -22,7 +22,15 @@
             <a v-bind:href="website" target="_blank">My website with v-bind</a>
             <h4>How to print "html" (v-html)</h4>
             <p v-html="printSpan"></p>
-        </section>      
+        </section>  
+        <section>
+            <h2>{{lessonTitle('Events')}}</h2>
+            <p>Cantidad: {{cantidad}}</p>
+            <button v-on:click="add(1)">"Click" to Add 1</button>
+            <button v-on:click="subtract(1)">"Click" to Subtract 1</button>
+            <button v-on:dblclick="add(10)">"Double Click" to Add 10</button>
+            <button v-on:dblclick="subtract(10)">"Double Click" to Subtract 10</button>
+        </section>    
     </div>
     <script src="app.js"></script>
 </body>
