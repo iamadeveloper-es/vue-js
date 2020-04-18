@@ -76,6 +76,11 @@
             <p>Edad: {{updateEdad}}</p>
             <button v-on:click="edad++">Aumentar Edad</button>
         </section>
+        <section>
+            <h2>{{lessonTitle('Dynamic CSS Classes')}}</h2>
+            <button v-on:click="color = !color">Cambia el color de la caja</button>
+            <div class="change-color" v-bind:class="changeClass">Cambia mi color</div>
+        </section>
     </div>
     <script src="app.js"></script>
 </body>

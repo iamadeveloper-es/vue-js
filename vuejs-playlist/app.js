@@ -8,7 +8,8 @@ new Vue({
         x: 0,
         y: 0,
         name: '',
-        edad: 35
+        edad: 35,
+        color: false
 
     },
     methods:{
@@ -40,6 +41,11 @@ new Vue({
            
            this.edad + 20
            console.log(this.edad);
+        },
+        changeClass: function(){
+            return{
+                color: this.color
+            }
         }
     }
 });
