@@ -20,10 +20,15 @@ header{
 section{
     margin: 2rem 0;
     padding: 2rem;
-    
+    background-color: #F6F6F6;
+    border: 1px solid rgb(170, 170, 170);
+    border-radius: 3px;
 }
 section:nth-child(even){
     background-color: #FFFFFF;
+}
+a{
+    color: #2196f3;
 }
 p{
     font-family: 'Montserrat', sans-serif;

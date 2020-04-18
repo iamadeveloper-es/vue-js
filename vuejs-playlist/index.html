@@ -16,8 +16,13 @@
         </header> 
         <section>
             <h2>{{lessonTitle('Data & Methods')}}</h2>
-            <button>Heol</button>
-        </section>       
+        </section>
+        <section>
+            <h2>{{lessonTitle('Data Binding')}}</h2>
+            <a v-bind:href="website" target="_blank">My website with v-bind</a>
+            <h4>How to print "html" (v-html)</h4>
+            <p v-html="printSpan"></p>
+        </section>      
     </div>
     <script src="app.js"></script>
 </body>
