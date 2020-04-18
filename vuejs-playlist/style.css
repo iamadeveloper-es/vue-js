@@ -48,3 +48,13 @@ button{
 button:hover{
     box-shadow: none;
 }
+.canvas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    width: 100%;
+    height: 300px;
+    background-color: #35495E;
+    color: white;
+}

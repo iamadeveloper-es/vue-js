@@ -30,7 +30,11 @@
             <button v-on:click="subtract(1)">"Click" to Subtract 1</button>
             <button v-on:dblclick="add(10)">"Double Click" to Add 10</button>
             <button v-on:dblclick="subtract(10)">"Double Click" to Subtract 10</button>
-        </section>    
+        </section>  
+        <section>
+            <h2>{{lessonTitle('Mouse Event')}}</h2>
+            <div class="canvas" v-on:mousemove="updateXY"><span>X: {{x}} - Y: {{y}}</span></div >
+        </section>  
     </div>
     <script src="app.js"></script>
 </body>
