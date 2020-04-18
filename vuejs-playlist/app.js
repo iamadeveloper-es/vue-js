@@ -6,7 +6,7 @@ new Vue({
         printSpan: '<span>This is an example of how to <strong>output an "html tag"</strong> using data binding.</span>',
         cantidad: 50,
         x: 0,
-        y: 0
+        y: 0,
 
     },
     methods:{
@@ -25,6 +25,9 @@ new Vue({
             this.x = event.offsetX;
             this.y = event.offsetY;
             //console.log(event.offsetX);
+        },
+        showAlert: function(){
+            alert('Has hecho "click", al cerrar está ventana NO te redirigirá al link');
         }
     }
 });

@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Learning Vue</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
+
 <body>
     <div id="vue-app">
         <header>
-           <h1>{{ appTitle }}</h1> 
-        </header> 
+            <h1>{{ appTitle }}</h1>
+        </header>
         <section>
             <h2>{{lessonTitle('Data & Methods')}}</h2>
         </section>
@@ -22,7 +26,7 @@
             <a v-bind:href="website" target="_blank">My website with v-bind</a>
             <h4>How to print "html" (v-html)</h4>
             <p v-html="printSpan"></p>
-        </section>  
+        </section>
         <section>
             <h2>{{lessonTitle('Events')}}</h2>
             <p>Cantidad: {{cantidad}}</p>
@@ -30,12 +34,28 @@
             <button v-on:click="subtract(1)">"Click" to Subtract 1</button>
             <button v-on:dblclick="add(10)">"Double Click" to Add 10</button>
             <button v-on:dblclick="subtract(10)">"Double Click" to Subtract 10</button>
-        </section>  
+        </section>
         <section>
             <h2>{{lessonTitle('Mouse Event')}}</h2>
-            <div class="canvas" v-on:mousemove="updateXY"><span>X: {{x}} - Y: {{y}}</span></div >
-        </section>  
+            <div class="canvas" v-on:mousemove="updateXY"><span>X: {{x}} - Y: {{y}}</span></div>
+        </section>
+        <section>
+            <h2>{{lessonTitle('Event Modifiers')}}</h2>
+            <h4>Modificadores de Eventos</h4>
+            <div class="half-w__container">
+                <div class="half-w">
+                    <h5>pulsando el botón de "Add" solo se ejecutará una vez</h5>
+                    <p>Cantidad: {{cantidad}}</p>
+                    <button v-on:click.once="add(1)">Add</button>
+                </div>
+                <div class="half-w">
+                    <h5>Preven Default ejemplo</h5>
+                    <a v-bind:href="website" v-on:click.prevent="showAlert">My website</a>
+                </div>
+            </div>
+        </section>
     </div>
     <script src="app.js"></script>
 </body>
+
 </html>
