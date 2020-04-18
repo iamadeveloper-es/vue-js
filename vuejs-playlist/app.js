@@ -7,7 +7,8 @@ new Vue({
         cantidad: 50,
         x: 0,
         y: 0,
-        name: ''
+        name: '',
+        edad: 35
 
     },
     methods:{
@@ -32,6 +33,13 @@ new Vue({
         },
         updateName: function(){
             alert('your name has been saved');
+        }
+    },
+    computed:{
+        updateEdad: function(){
+           
+           this.edad + 20
+           console.log(this.edad);
         }
     }
 });

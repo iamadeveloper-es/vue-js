@@ -70,6 +70,12 @@
                 <p v-if="name" class="output">Tu nombre es: {{name}}</p>
             </form>
         </section>
+        <section class="unfinished">
+            <h2>{{lessonTitle('Computed Properties')}}</h2>
+            <h4>Usar para cualquier lógica compleja en vez de los "Métodos"</h4>
+            <p>Edad: {{updateEdad}}</p>
+            <button v-on:click="edad++">Aumentar Edad</button>
+        </section>
     </div>
     <script src="app.js"></script>
 </body>
