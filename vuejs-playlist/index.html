@@ -17,6 +17,7 @@
     <div id="vue-app">
         <header>
             <h1>{{ appTitle }}</h1>
+            <p><small>From the Net Ninja</small></p>
         </header>
         <section>
             <h2>{{lessonTitle('Data & Methods')}}</h2>
@@ -53,6 +54,14 @@
                     <a v-bind:href="website" v-on:click.prevent="showAlert">My website</a>
                 </div>
             </div>
+        </section>
+        <section>
+            <h2>{{lessonTitle('Keyboard Events')}}</h2>
+            <form action="">
+                <label for="name">Nombre: </label>
+                <input v-on:keypress.13.prevent="updateName" type="text" placeholder="write your name and press 'Enter'">
+                <p class="output">{{name}}</p>
+            </form>
         </section>
     </div>
     <script src="app.js"></script>

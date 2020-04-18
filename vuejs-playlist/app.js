@@ -7,6 +7,7 @@ new Vue({
         cantidad: 50,
         x: 0,
         y: 0,
+        name: ''
 
     },
     methods:{
@@ -28,6 +29,9 @@ new Vue({
         },
         showAlert: function(){
             alert('Has hecho "click", al cerrar está ventana NO te redirigirá al link');
+        },
+        updateName: function(){
+            alert('your name has been saved');
         }
     }
 });

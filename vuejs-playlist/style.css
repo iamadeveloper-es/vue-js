@@ -68,3 +68,14 @@ button:hover{
     margin: 1rem;
     background-color: #F6F6F6;
 }
+label{
+    display: block;
+}
+input{
+    display: block;
+    margin: .5rem 0;
+    padding: .5rem;
+    width: 50%;
+    font-size: 1rem;
+
+}
