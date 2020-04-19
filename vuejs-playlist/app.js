@@ -12,7 +12,15 @@ new Vue({
         color: false,
         error: false,
         success: false,
-        mostrar: true
+        mostrar: true,
+        nombres: ['Daniel', 'Alberto', 'Alfredo', 'Jorge'],
+        personas: [
+            {name: 'Daniel', profesion: 'programador'},
+            {name: 'Alfredo', profesion: 'programador'},
+            {name: 'Alberto', profesion: 'Arte finalista'},
+            {name: 'Daniel', profesion: 'Diseñador'},
+        ]
+
 
     },
     methods:{
