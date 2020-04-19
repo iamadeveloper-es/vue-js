@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Learning Vue</title>
-    <link rel="stylesheet" href="style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
@@ -80,6 +80,23 @@
             <h2>{{lessonTitle('Dynamic CSS Classes')}}</h2>
             <button v-on:click="color = !color">Cambia el color de la caja</button>
             <div class="change-color" v-bind:class="changeClass">Cambia mi color</div>
+        </section>
+        <section>
+            <h2>{{lessonTitle('Conditionals (v-if, v-show)')}}</h2>
+            <div class="half-w__container">
+                <div class="half-w">
+                    <h4>V-if: </h4>
+                    <button v-on:click="toggleError()">Toggle Error</button>
+                    <button v-on:click="toggleSuccess()">Toggle Success</button>
+                    <div v-if="error" class="alert error">The has been an Error</div>
+                    <div v-if="success" class="alert success">Yesss, succes!!</div>  
+                </div>
+                <div class="half-w">
+                    <h4>V-show</h4>
+                    <button v-on:click="toggleDiv">Toggle div</button>
+                    <div v-show="mostrar" class="alert success">Hola!</div>
+                </div>
+            </div>       
         </section>
     </div>
     <script src="app.js"></script>

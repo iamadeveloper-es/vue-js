@@ -9,7 +9,10 @@ new Vue({
         y: 0,
         name: '',
         edad: 35,
-        color: false
+        color: false,
+        error: false,
+        success: false,
+        mostrar: true
 
     },
     methods:{
@@ -34,6 +37,17 @@ new Vue({
         },
         updateName: function(){
             alert('your name has been saved');
+        },
+        toggleError: function(){
+            this.error = !this.error
+            this.success = false
+        },
+        toggleSuccess: function(){
+            this.success = !this.success
+            this.error = false
+        },
+        toggleDiv: function(){
+            this.mostrar = !this.mostrar
         }
     },
     computed:{
@@ -46,6 +60,7 @@ new Vue({
             return{
                 color: this.color
             }
-        }
+        },
+        
     }
 });

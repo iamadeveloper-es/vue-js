@@ -67,6 +67,7 @@ button:hover{
     padding: 1rem;
     margin: 1rem;
     background-color: #F6F6F6;
+    border: 1px solid rgb(189, 189, 189);
 }
 label{
     display: block;
@@ -89,6 +90,18 @@ input{
     margin-top: 2rem;
 }
 .color{
+    background-color: #40B883;
+    color: #353535;
+}
+.alert{
+    margin: 1rem 0;
+    border-radius: 3px;
+    padding: 1rem;
+}
+.error{
+    background-color: rgba(255, 0, 0, 0.151);
+}
+.success{
     background-color: #40B883;
     color: #353535;
 }
